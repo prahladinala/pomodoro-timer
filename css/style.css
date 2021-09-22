@@ -1,0 +1,104 @@
+.progress-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.progress-ring__circle {
+  transition: 0.5s;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  stroke: rgb(51, 65, 255);
+}
+
+footer {
+  position: fixed;
+  bottom: 4px;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.start {
+  background: #28a745;
+  border-color: #28a745;
+  color: #ffffff;
+}
+.break {
+  background: #6a1b4d;
+  border-color: #6a1b4d;
+  color: #ffffff;
+}
+.reset {
+  background: #dc3545;
+  border-color: #dc3545;
+  color: #ffffff;
+}
+.pause {
+  background: #ffc107;
+  border-color: #ffc107;
+  color: #000000;
+}
+.resume {
+  background: rgb(131, 10, 252);
+  border-color: rgb(131, 10, 252);
+  color: white;
+}
+
+.clock {
+  padding: 3px;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  height: 30%;
+  font-size: 24px;
+}
+.danger {
+  stroke: rgb(243, 17, 28);
+  animation: pulse 0.9s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%,
+  100% {
+    transform: rotate(-90deg) scale(1);
+  }
+  50% {
+    transform: rotate(-90deg) scale(1.05);
+  }
+  75% {
+    transform: rotate(-90deg) scale(0.8);
+  }
+}
+@media screen and (min-width: 768px) {
+  .clock {
+    grid-area: clock;
+    height: 100%;
+  }
+
+  footer {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  footer {
+    position: static;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .mybtngrp {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mybtngrp {
+    margin-top: 45px;
+    margin-bottom: 15px;
+  }
+}
